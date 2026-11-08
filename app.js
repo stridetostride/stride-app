@@ -1,3 +1,10 @@
+const SUPABASE_URL = 'https://gnkfvgikmbbudvkblcnx.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_y7mJl9_LvLkKPOrInpoucg_BN7xR3UI';
+
+const { createClient } = await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm');
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+window.supabase = supabase;
+
 // เริ่มต้นแผนที่
 let map = null;
 
