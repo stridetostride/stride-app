@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stride — ทุกก้าวคือดินแดนที่คุณสร้าง</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+    <!-- หน้าแรก -->
+    <div class="screen active" id="screen-map">
+        <header class="app-header">
+            <h1 class="app-logo">Stride</h1>
+            <button class="header-btn" onclick="toggleMenu()">☰</button>
+        </header>
+
+        <div class="map-container" id="map"></div>
+
+        <div class="start-btn-wrapper">
+            <button class="start-button" id="startBtn" onclick="startJourney()">
+                🚶 เริ่มออกเดินทาง
+            </button>
+        </div>
+    </div>
+
+    <!-- เมนูด้านล่าง -->
+    <nav class="bottom-nav">
+        <button class="nav-item active" data-screen="screen-map">
+            <span class="nav-icon">🗺️</span>
+            <span class="nav-label">แผนที่</span>
+        </button>
+        <button class="nav-item" data-screen="screen-history">
+            <span class="nav-icon">📊</span>
+            <span class="nav-label">ประวัติ</span>
+        </button>
+        <button class="nav-item" data-screen="screen-sponsors">
+            <span class="nav-icon">🏪</span>
+            <span class="nav-label">สปอนเซอร์</span>
+        </button>
+        <button class="nav-item" data-screen="screen-profile">
+            <span class="nav-icon">👤</span>
+            <span class="nav-label">ของฉัน</span>
+        </button>
+    </nav>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
